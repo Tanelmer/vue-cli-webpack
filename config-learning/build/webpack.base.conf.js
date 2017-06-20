@@ -57,7 +57,7 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
-        // 把较小的图片转换成base64的字符串内嵌在生成的js文件里 name指明了输出的命名规则
+        // 把较小的图片转换成base64的字符串内嵌在生成的js文件里 name指明了输出的命名规则 加hash是为了不同版本号
         options: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
